@@ -1,0 +1,60 @@
+<body>
+  <header>
+    <h1>Reportes y Consultas</h1>
+  </header>
+  <main>
+    <section>
+      <form #form="ngForm" (ngSubmit)="generarReporteDiario(form)">
+        <h2>Reporte Diario</h2>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" [(ngModel)]="fecha" required>
+        <button type="submit">Generar Reporte</button>
+      </form>
+    </section>
+    <section>
+      <form #form1="ngForm" (ngSubmit)="generarReporteSemanal(form1)">
+        <h2>Reporte Semanal</h2>
+        <label for="semana">Semana:</label>
+        <input type="week" id="semana" name="semana" [(ngModel)]="semana" required>
+        <button type="submit">Generar Reporte</button>
+      </form>
+    </section>
+    <section>
+      <form #form2="ngForm" (ngSubmit)="generarReporteMensual(form2)">
+        <h2>Reporte Mensual</h2>
+        <label for="mes">Mes:</label>
+        <input type="month" id="mes" name="mes" [(ngModel)]="mes" required>
+        <button type="submit">Generar Reporte</button>
+      </form>
+    </section>
+    <section>
+      <form #form3="ngForm" (ngSubmit)="generarReporteAnual(form3)">
+        <h2>Reporte Anual</h2>
+        <label for="anio">Año:</label>
+        <input type="number" id="anio" name="anio" [(ngModel)]="anio" required>
+        <button type="submit">Generar Reporte</button>
+        </form>
+    </section>
+    <section>
+      <form #form4="ngForm" (ngSubmit)="consultarVehiculo(form4)">
+        <h2>Consulta de Vehículo</h2>
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" [(ngModel)]="placa" required>
+        <button type="submit">Buscar</button>
+      </form>
+    
+      <div *ngIf="registroVehiculo">
+        <h3>Información del vehículo:</h3>
+        <p>Marca: {{ registroVehiculo.marca }}</p>
+        <p>Año: {{ registroVehiculo.anio }}</p>
+        <p>Color: {{ registroVehiculo.color }}</p>
+        <!-- Agrega aquí los demás campos que desees mostrar -->
+      </div>
+    
+      <div *ngIf="!registroVehiculo">
+        <p>No se encontró ningún vehículo registrado con la placa ingresada.</p>
+      </div>
+    </section>
+    
+  </main>
+</body>

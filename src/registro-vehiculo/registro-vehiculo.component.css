@@ -1,0 +1,91 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/img/background_01.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+  }
+    form {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+     
+    }
+    label {
+      display: block;
+      margin-bottom: 10px; 
+    }
+    
+    select {
+      padding: 8px;
+      font-size: 16px; 
+      border: 1px solid #ccc; 
+      border-radius: 4px; 
+      width: 200px; 
+      background-color: #f5f5f5; 
+      color: #333; 
+    }
+    
+    select option {
+      padding: 8px; 
+    }
+    
+    select option:first-child {
+      color: #999; 
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    
+    
+    input[type="submit"] {
+        background-color: #ee4a4a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px ;
+        cursor: pointer;
+        align-items: center;
+        }
+        
+        input[type="submit"]:hover {
+        background-color: #0b800b;
+        }
+        
+    main {
+        padding: 40px 0;
+        }
+  

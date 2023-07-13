@@ -1,0 +1,87 @@
+<body>
+    <header>
+        <h1>  Detalles de la reserva</h1>
+    </header>
+    <form [formGroup]="registroForm" (ngSubmit)="submitForm()">
+  <h2>Detalles de la reserva</h2>
+
+  <div class="form-group">
+    <label for="fecha">Fecha de la reserva:</label>
+    <input type="date" id="fecha" name="fecha" formControlName="fecha">
+  </div>
+
+  <div class="form-group">
+    <label for="hora">Hora de la reserva:</label>
+    <input type="time" id="hora" name="hora" formControlName="hora">
+  </div>
+
+  <div class="form-group">
+    <label for="espacio">Espacio de estacionamiento:</label>
+    <select id="espacio" name="espacio" formControlName="espacio">
+      <option value="">Seleccione un espacio</option>
+      <option value="1">Espacio 1</option>
+<option value="2">Espacio 2</option>
+<option value="3">Espacio 3</option>
+<option value="4">Espacio 4</option>
+<option value="5">Espacio 5</option>
+<option value="6">Espacio 6</option>
+<option value="7">Espacio 7</option>
+<option value="8">Espacio 8</option>
+<option value="9">Espacio 9</option>
+<option value="10">Espacio 10</option>
+<option value="11">Espacio 11</option>
+<option value="12">Espacio 12</option>
+<option value="13">Espacio 13</option>
+<option value="14">Espacio 14</option>
+<option value="15">Espacio 15</option>
+<option value="16">Espacio 16</option>
+<option value="17">Espacio 17</option>
+<option value="18">Espacio 18</option>
+<option value="19">Espacio 19</option>
+<option value="20">Espacio 20</option>
+<option value="21">Espacio 21</option>
+<option value="22">Espacio 22</option>
+<option value="23">Espacio 23</option>
+<option value="24">Espacio 24</option>
+<option value="25">Espacio 25</option>
+<option value="26">Espacio 26</option>
+<option value="27">Espacio 27</option>
+<option value="28">Espacio 28</option>
+<option value="29">Espacio 29</option>
+<option value="30">Espacio 30</option>
+<option value="31">Espacio 31</option>
+<option value="32">Espacio 32</option>
+<option value="33">Espacio 33</option>
+<option value="34">Espacio 34</option>
+<option value="35">Espacio 35</option>
+<option value="36">Espacio 36</option>
+<option value="37">Espacio 37</option>
+<option value="38">Espacio 38</option>
+<option value="39">Espacio 39</option>
+<option value="40">Espacio 40</option>
+<option value="41">Espacio 41</option>
+<option value="42">Espacio 42</option>
+<option value="43">Espacio 43</option>
+<option value="44">Espacio 44</option>
+<option value="45">Espacio 45</option>
+<option value="46">Espacio 46</option>
+<option value="47">Espacio 47</option>
+<option value="48">Espacio 48</option>
+<option value="49">Espacio 49</option>
+<option value="50">Espacio 50</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="tiempo">Tiempo de la reserva:</label>
+    <input type="number" id="tiempo" name="tiempo" min="1" max="24" step="1" formControlName="tiempo">
+    <span class="form-group__info">Horas</span>
+  </div>
+
+  <input type="submit" value="Reservar"[disabled]="!registroForm.valid">
+       <span *ngIf="!registroForm.valid && registroForm.touched">Por favor, completa todos los campos.</span>
+</form>
+
+</body>
+
+

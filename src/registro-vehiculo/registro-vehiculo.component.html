@@ -1,0 +1,35 @@
+
+<head>
+  <title>Registro de Vehículos</title>
+</head>
+<body>
+  <header>
+    <h1>Registro de Vehículos</h1>
+  </header>
+
+  <form [formGroup]="registroForm" (ngSubmit)="submitForm()">
+
+    <label for="Tipo_Vehiculo">Tipo de Vehiculo:</label>
+        <select id="Tipo_Vehiculo" name="Tipo_Vehiculo" formControlName="Tipo_Vehiculo">
+            <option value="">- Seleccionar -</option>
+            <option value="Auto">Auto</option>
+            <option value="Moto">Moto</option>
+        </select>
+        
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" name="marca"  formControlName="marca" required><br><br>
+
+    <label for="anio">Año:</label>
+    <input type="number" id="anio" name="anio" formControlName="anio" required><br><br>
+
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color"  formControlName="color" required><br><br>
+
+    <label for="placa">Placa:</label>
+    <input type="text" id="placa" name="placa"  formControlName="placa" required><br><br>
+
+    <input type="submit" value="Registrar"[disabled]="!registroForm.valid">
+       <span *ngIf="!registroForm.valid && registroForm.touched">Por favor, completa todos los campos.</span>
+  </form>
+</body>
+

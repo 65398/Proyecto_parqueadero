@@ -1,0 +1,93 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/assets/img/background_01.jpg');
+  }
+ 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+ 
+    color: #fff;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo__img {
+    max-width: 80px;
+  }
+  
+  h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+
+  }
+  
+  form label {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"],
+  form input[type="week"],
+  form input[type="month"] {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 250px;
+  }
+  
+  form button[type="submit"] {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ee4a4a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0b800b;
+  }
+  
+  
+  section h2 {
+    margin: 30px;
+    font-size: 30px;
+    text-align: center;
+  }
+  main {
+    padding: 40px 0;
+    }
+  
+
+  
+  
+  
